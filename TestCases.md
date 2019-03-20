@@ -17,20 +17,20 @@ Steps:
 Expected Results: Status 200 ok
 
 tescase#2
-Test Type:Функциональное теститирование
+Test Type:Функциональное тестирование
 Name test:Регистрация с уже существующим имейлом на сайте
 Test goal: Убедиться, что риквест отправлен и ошибка высветилась
 Preconditions: Приложение Postman открыто
 Steps: 1. Ввести https://test-api.umarkets.com/registration/account?currentUrl=https%3A%2F%2Ftest-my.umarkets.com%2F%23register
-Выбрать "Body" => "raw" => "JSON"
-2.Ввести данные:
+2.Выбрать "Body" => "raw" => "JSON"
+3.Ввести данные:
 "LinkID": "",
 "confirm": "12345qwe",
 "email": "fhfhf@i.ua",
 "lang": "en",
 "password": "12345qwe"
-3. Выбрать тип запроса Post
-4. Нажать "Send"
+4. Выбрать тип запроса Post
+5. Нажать "Send"
 Expected Results:Error 500, "message": "User with this email is already registered.
 
 testcase#3
