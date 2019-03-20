@@ -3,7 +3,7 @@ HomeWork11
 
 
 tescase#1
-Test Type:Функциональность
+Test Type:Функциональное теститирование
 Name test: Регистрация с валидными данными 
 Test goal: Убедиться, что риквест успешно отправлен
 Preconditions: Приложение Postman открыто
@@ -13,9 +13,10 @@ Steps: 1. Ввести https://test-api.umarkets.com/registration/account?curren
 Expected Results: Status 200 ok
 
 tescase#2
-Test Type:Функциональность
+Test Type:Функциональное теститирование
 Name test:Регистрация с уже существующим имейлом на сайте
 Test goal: Убедиться, что риквест отправлен и ошибка высветилась
+Preconditions: Приложение Postman открыто
 Steps: 1. Ввести https://test-api.umarkets.com/registration/account?currentUrl=https%3A%2F%2Ftest-my.umarkets.com%2F%23register
 Выбрать "Body" => "raw" => "JSON"
 2.Ввести данные:
@@ -29,9 +30,10 @@ Steps: 1. Ввести https://test-api.umarkets.com/registration/account?curren
 Expected Results:Error 500, "message": "User with this email is already registered.
 
 testcase#3
-Test Type:Функциональность
+Test Type:Функциональное теститирование
 Name test:Регистрация с пустыми полями в строке Пароль
 Test goal: Убедиться, что риквест отправлен и ошибка высветилась
+Preconditions: Приложение Postman открыто
 Steps: 1. Ввести https://test-api.umarkets.com/registration/account?currentUrl=https%3A%2F%2Ftest-my.umarkets.com%2F%23register
 .Выбрать "Body" => "raw" => "JSON"
 2.Ввести данные:
@@ -45,9 +47,10 @@ Steps: 1. Ввести https://test-api.umarkets.com/registration/account?curren
 Expected reusult: statusCode": 400 Bad Request "message": "Password is required."
 
 testcase#4
-Test Type:Функциональность
+Test Type:Функциональное теститирование
 Name test:Регистрация с неверным паролем в поле Confirm Password
 Test goal: Убедиться, что риквест отправлен и ошибка высветилась
+Preconditions: Приложение Postman открыто
 Steps: 1. Ввести https://test-api.umarkets.com/registration/account?currentUrl=https%3A%2F%2Ftest-my.umarkets.com%2F%23register
 2.Выбрать "Body" => "raw" => "JSON"
 3.Ввести данные:
@@ -60,9 +63,10 @@ Steps: 1. Ввести https://test-api.umarkets.com/registration/account?curren
 Expected reusult: Status 500 Internal Server
 
 testcase#5 
-Test Type:Функциональность
+Test Type:Функциональное теститирование
 Name test:Регистрация с пустыми полями
 Test goal: Убедиться, что риквест отправлен и ошибка высветилась
+Preconditions: Приложение Postman открыто
 Steps: 1. Ввести https://test-api.umarkets.com/registration/account?currentUrl=https%3A%2F%2Ftest-my.umarkets.com%2F%23register
 2.Выбрать "Body" => "raw" => "JSON"
 3.Ввести данные:
@@ -75,7 +79,7 @@ Steps: 1. Ввести https://test-api.umarkets.com/registration/account?curren
 Expected reusult: Status 400 Bad Request "message": "Password is required. The Email field is not a valid e-mail address. The Email field is required."
 
 tescase#6
-Test Type:Функциональность
+Test Type:Функциональное теститирование
 Name test: Авторизация с валидными данными 
 Test goal: Убедиться, что авторизороватся с валидными данными возможно.
 Preconditions: Приложение Postman открыто
@@ -87,7 +91,7 @@ Steps: 1. Ввести в строку URL "https://test-api.umarkets.com/accoun
 Expected Results: Status 200 ok
 
 tescase#7
-Test Type:Функциональность
+Test Type:Функциональное теститирование
 Name test: Авторизация с невалидными данными 
 Test goal: Убедиться, что авторизироватся с невалидными данными нельзя.
 Preconditions: Приложение Postman открыто
@@ -99,7 +103,7 @@ Steps: 1. Ввести в строку URL "https://test-api.umarkets.com/accoun
 Expected Results: Status 401 Unauthorized.
 
 tescase#8
-Test Type:Функциональность
+Test Type:Функциональное теститирование
 Name test: Авторизация с пустыми полями. 
 Test goal: Убедиться, что авторизироватся с пустыми полями нельзя.
 Preconditions: Приложение Postman открыто
