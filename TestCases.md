@@ -12,7 +12,7 @@ Steps:
 
 2/Выбрать "Body" => "raw" => "JSON"
 
-3.Ввести данные: "email": "test666test66@gmail.com","password": "333qwe333", "confirm": "333qwe333". 
+3.Ввести данные: "email": Enter new valid email, "password": "333qwe333", "confirm": "333qwe333". 
 4. Тип запроса Post 
 5. Нажать "Send"
 Expected Results: Status 200 ok
