@@ -7,9 +7,14 @@ Test Type:Функциональное теститирование
 Name test: Регистрация с валидными данными 
 Test goal: Убедиться, что риквест успешно отправлен
 Preconditions: Приложение Postman открыто
-Steps: 1. Ввести https://test-api.umarkets.com/registration/account?currentUrl=https%3A%2F%2Ftest-my.umarkets.com%2F%23register ,
+Steps:
+1. Ввести https://test-api.umarkets.com/registration/account?currentUrl=https%3A%2F%2Ftest-my.umarkets.com%2F%23register
+
 2/Выбрать "Body" => "raw" => "JSON"
-3.Ввести данные: "email": "test666test66@gmail.com","password": "333qwe333", "confirm": "333qwe333". 4. Тип запроса Post 5. Нажать "Send"
+
+3.Ввести данные: "email": "test666test66@gmail.com","password": "333qwe333", "confirm": "333qwe333". 
+4. Тип запроса Post 
+5. Нажать "Send"
 Expected Results: Status 200 ok
 
 tescase#2
