@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "9e1f77df-2524-4587-8faf-05fcbf888cdc",
+		"name": "SingIN",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "correct data",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"lang\":null,\"email\":\"vlad.bugs.busters@gmail.com\",\"password\":\"qwe123\"}"
+				},
+				"url": {
+					"raw": "https://test-api.umarkets.com/account/logon?currentUrl=https%3A%2F%2Ftest-my.umarkets.com%2F%23login",
+					"protocol": "https",
+					"host": [
+						"test-api",
+						"umarkets",
+						"com"
+					],
+					"path": [
+						"account",
+						"logon"
+					],
+					"query": [
+						{
+							"key": "currentUrl",
+							"value": "https%3A%2F%2Ftest-my.umarkets.com%2F%23login"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "wrong data",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"lang\":null,\"email\":\"vlad.bugs.busters@gmail.comm\",\"password\":\"qwe1231\"}"
+				},
+				"url": {
+					"raw": "https://test-api.umarkets.com/account/logon?currentUrl=https%3A%2F%2Ftest-my.umarkets.com%2F%23login",
+					"protocol": "https",
+					"host": [
+						"test-api",
+						"umarkets",
+						"com"
+					],
+					"path": [
+						"account",
+						"logon"
+					],
+					"query": [
+						{
+							"key": "currentUrl",
+							"value": "https%3A%2F%2Ftest-my.umarkets.com%2F%23login"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "empty field",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"lang\":null,\"email\":\"\",\"password\":\"\"}"
+				},
+				"url": {
+					"raw": "https://test-api.umarkets.com/account/logon?currentUrl=https%3A%2F%2Ftest-my.umarkets.com%2F%23login",
+					"protocol": "https",
+					"host": [
+						"test-api",
+						"umarkets",
+						"com"
+					],
+					"path": [
+						"account",
+						"logon"
+					],
+					"query": [
+						{
+							"key": "currentUrl",
+							"value": "https%3A%2F%2Ftest-my.umarkets.com%2F%23login"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
