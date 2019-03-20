@@ -1,5 +1,7 @@
 # team13
 HomeWork11
+
+
 tescase#1
 Test Type:Функциональность
 Name test: Регистрация с валидными данными 
@@ -72,7 +74,7 @@ Steps: 1. Ввести https://test-api.umarkets.com/registration/account?curren
 5. Нажать "Send"
 Expected reusult: Status 400 Bad Request "message": "Password is required. The Email field is not a valid e-mail address. The Email field is required."
 
-tescase#7
+tescase#6
 Test Type:Функциональность
 Name test: Авторизация с валидными данными 
 Test goal: Убедиться, что авторизороватся с валидными данными возможно.
@@ -84,7 +86,7 @@ Steps: 1. Ввести в строку URL "https://test-api.umarkets.com/accoun
 5. Нажать "Send".
 Expected Results: Status 200 ok
 
-tescase#8
+tescase#7
 Test Type:Функциональность
 Name test: Авторизация с невалидными данными 
 Test goal: Убедиться, что авторизироватся с невалидными данными нельзя.
@@ -96,7 +98,7 @@ Steps: 1. Ввести в строку URL "https://test-api.umarkets.com/accoun
 5. Нажать "Send".
 Expected Results: Status 401 Unauthorized.
 
-tescase#9
+tescase#8
 Test Type:Функциональность
 Name test: Авторизация с пустыми полями. 
 Test goal: Убедиться, что авторизироватся с пустыми полями нельзя.
