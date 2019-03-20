@@ -10,7 +10,7 @@ Preconditions: Приложение Postman открыто
 Steps: 1. Ввести в строку URL https://test-api.umarkets.com/registration/account?currentUrl=https%3A%2F%2Ftest-my.umarkets.com%2F%23register ,
 2.Выбрать "Body" => "raw" => "JSON"
 3.Ввести данные: "email": "{"test666test66@gmail.com","password": "333qwe333", "confirm": "333qwe333"}". 
-4. Тип запроса Post 
+4. Тип запроса "Post" 
 5. Нажать "Send"
 Expected Results: Status 200 ok
 
@@ -42,7 +42,7 @@ Steps: 1. Ввести в строку URL https://test-api.umarkets.com/registr
 "email": "test666test66@gmail.com",
 "lang": "en",
 "password": ""}"
-4. Выбрать тип запроса Post
+4. Выбрать тип запроса "Post"
 5. Нажать "Send"
 Expected reusult: statusCode": 400 Bad Request "message": "Password is required."
 
@@ -57,7 +57,7 @@ Steps: 1. Ввести в строку URL https://test-api.umarkets.com/registr
 "email": "djshfkjs@gmail.com",
 "lang": "en",
 "password": "12345qw"}"
-4. Выбрать тип запроса Post
+4. Выбрать тип запроса "Post"
 5. Нажать "Send"
 Expected reusult: Status 500 Internal Server
 
@@ -72,7 +72,7 @@ Steps: 1. Ввести в строку URL https://test-api.umarkets.com/registr
 "email": "",
 "lang": "",
 "password": ""}"
-4. Выбрать тип запроса Post
+4. Выбрать тип запроса "Post"
 5. Нажать "Send"
 Expected reusult: Status 400 Bad Request "message": "Password is required. The Email field is not a valid e-mail address. The Email field is required."
 
@@ -118,10 +118,10 @@ Name test:Восстановление пароля с валидным email
 Preconditions: Приложение Postman открыто
 Steps:
 1. В поле для URL ввести "https://test-api.umarkets.com/account/forgot-password?currentUrl=https%3A%2F%2Ftest-my.umarkets.com%2F%3Flang%3Den%23forgotPassword" 
-2. Выбрать метод POST
-3. Во вкладке "Body" выбрать "raw" и поменять "Text" на JSON 
+2. Выбрать метод "POST"
+3. Во вкладке "Body" выбрать "raw" и поменять "Text" на "JSON" 
 4. В поле для ввода вставить "{"lang":null,"email":"cavehodipo@mail-pro.info","baseLink":"https://test-my.umarkets.com/#resetPassword/","culture":"en"}"
-5. Нажать Send
+5. Нажать "Send"
 Exepted result: Status 200 OK.
 
 tescase#10
@@ -130,10 +130,10 @@ Name test:Восстановление пароля с валидным email
 Preconditions: Приложение Postman открыто
 Steps:
 1. В поле для URL ввести "https://test-api.umarkets.com/account/forgot-password?currentUrl=https%3A%2F%2Ftest-my.umarkets.com%2F%3Flang%3Den%23forgotPassword" 
-2. Выбрать метод POST
-3. Во вкладке "Body" выбрать "raw" и поменять "Text" на JSON 
+2. Выбрать метод "POST"
+3. Во вкладке "Body" выбрать "raw" и поменять "Text" на "JSON" 
 4. В поле для ввода вставить "{"lang":null,"email":"cavehodipo@@mail-pro.info","baseLink":"https://test-my.umarkets.com/#resetPassword/","culture":"en"}"
-5. Нажать Send
+5. Нажать "Send"
 Exepted result: Status 500 Internal server error.
 
 tescase#11
@@ -142,10 +142,10 @@ Name test:Восстановление пароля с пустым email
 Preconditions: Приложение Postman открыто
 Steps:
 1. В поле для URL ввести "https://test-api.umarkets.com/account/forgot-password?currentUrl=https%3A%2F%2Ftest-my.umarkets.com%2F%3Flang%3Den%23forgotPassword" 
-2. Выбрать метод POST
-3. Во вкладке "Body" выбрать "raw" и поменять "Text" на JSON 
+2. Выбрать метод "POST"
+3. Во вкладке "Body" выбрать "raw" и поменять "Text" на "JSON"
 4. В поле для ввода вставить "{"lang":null,"email":"","baseLink":"https://test-my.umarkets.com/#resetPassword/","culture":"en"}"
-5. Нажать Send
+5. Нажать "Send"
 Exepted result: Status 500 Internal server error.
 
 tescase#12
@@ -154,8 +154,8 @@ Name test:Восстановление пароля несуществующег
 Preconditions: Приложение Postman открыто
 Steps:
 1. В поле для URL ввести "https://test-api.umarkets.com/account/forgot-password?currentUrl=https%3A%2F%2Ftest-my.umarkets.com%2F%3Flang%3Den%23forgotPassword" 
-2. Выбрать метод POST
-3. Во вкладке "Body" выбрать "raw" и поменять "Text" на JSON 
+2. Выбрать метод "POST"
+3. Во вкладке "Body" выбрать "raw" и поменять "Text" на "JSON" 
 4. В поле для ввода вставить "{"lang":null,"email":"aumad@i.ua","baseLink":"https://test-my.umarkets.com/#resetPassword/","culture":"en"}"
-5. Нажать Send
+5. Нажать "Send"
 Exepted result: Status 500 Internal server error.
