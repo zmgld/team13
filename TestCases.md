@@ -109,3 +109,51 @@ Steps: 1. Ввести в строку URL "https://test-api.umarkets.com/accoun
 4.Ввести данные: "{"lang":null,"email":"","password":""}".  
 5. Нажать "Send".
 Expected Results: Status 401 Unauthorized.
+
+tescase#9
+Test Type:Функциональное теститирование
+Name test:Восстановление пароля с валидным email
+Preconditions: Приложение Postman открыто
+Steps:
+1. В поле для URL ввести "https://test-api.umarkets.com/account/forgot-password?currentUrl=https%3A%2F%2Ftest-my.umarkets.com%2F%3Flang%3Den%23forgotPassword" 
+2. Выбрать метод POST
+3. Во вкладке "Body" выбрать "raw" и поменять "Text" на JSON 
+4. В поле для ввода вставить "{"lang":null,"email":"cavehodipo@mail-pro.info","baseLink":"https://test-my.umarkets.com/#resetPassword/","culture":"en"}"
+5. Нажать Send
+Exepted result: Status 200 OK.
+
+tescase#10
+Test Type:Функциональное теститирование
+Name test:Восстановление пароля с валидным email
+Preconditions: Приложение Postman открыто
+Steps:
+1. В поле для URL ввести "https://test-api.umarkets.com/account/forgot-password?currentUrl=https%3A%2F%2Ftest-my.umarkets.com%2F%3Flang%3Den%23forgotPassword" 
+2. Выбрать метод POST
+3. Во вкладке "Body" выбрать "raw" и поменять "Text" на JSON 
+4. В поле для ввода вставить "{"lang":null,"email":"cavehodipo@@mail-pro.info","baseLink":"https://test-my.umarkets.com/#resetPassword/","culture":"en"}"
+5. Нажать Send
+Exepted result: Status 500 Internal server error.
+
+tescase#11
+Test Type:Функциональное теститирование
+Name test:Восстановление пароля с пустым email
+Preconditions: Приложение Postman открыто
+Steps:
+1. В поле для URL ввести "https://test-api.umarkets.com/account/forgot-password?currentUrl=https%3A%2F%2Ftest-my.umarkets.com%2F%3Flang%3Den%23forgotPassword" 
+2. Выбрать метод POST
+3. Во вкладке "Body" выбрать "raw" и поменять "Text" на JSON 
+4. В поле для ввода вставить "{"lang":null,"email":"","baseLink":"https://test-my.umarkets.com/#resetPassword/","culture":"en"}"
+5. Нажать Send
+Exepted result: Status 500 Internal server error.
+
+tescase#12
+Test Type:Функциональное теститирование
+Name test:Восстановление пароля несуществующего юзера
+Preconditions: Приложение Postman открыто
+Steps:
+1. В поле для URL ввести "https://test-api.umarkets.com/account/forgot-password?currentUrl=https%3A%2F%2Ftest-my.umarkets.com%2F%3Flang%3Den%23forgotPassword" 
+2. Выбрать метод POST
+3. Во вкладке "Body" выбрать "raw" и поменять "Text" на JSON 
+4. В поле для ввода вставить "{"lang":null,"email":"aumad@i.ua","baseLink":"https://test-my.umarkets.com/#resetPassword/","culture":"en"}"
+5. Нажать Send
+Exepted result: Status 500 Internal server error.
