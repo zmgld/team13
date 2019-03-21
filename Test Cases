@@ -91,7 +91,7 @@ Expected Results: Status 200 ok
 tescase#7
 Test Type:Функциональность
 Name test: Авторизация с невалидными данными 
-Test goal: Убедиться, что авторизироватся с невалидными данными нельзя.
+Test goal: Убедиться, что авторизироваться с невалидными данными нельзя.
 Preconditions: Приложение Postman открыто
 Steps: 1. Ввести в строку URL "https://test-api.umarkets.com/account/logon?currentUrl=https%3A%2F%2Ftest-my.umarkets.com%2F%23login" ,
 2.Выбрать тип запроса "Post". 
