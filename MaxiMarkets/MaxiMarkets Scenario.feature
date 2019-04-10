@@ -35,3 +35,30 @@ Background:
 |                         | qwe123qqq   | qwe123qqq           | <User with this email is |
 | <343243432@i.ua>        |             |                     |    already registered>   |
 |                         |             |                     |                          |    
+
+Scenario:
+ When I enter '<email>' to the e-mail field
+	And I enter '<password>' to the password field
+	And I enter '<password>' to the confirm-password field
+	And I click on the button Submit
+    Then Message about error is appeared
+     
+   Example:
+|       email             | password    | confirm password    | message               |
+|                         |             |                     | <Enter email and      |
+|        <>               |     <>      |          <>         |    password>          |
+
+
+
+
+Scenario:
+ When I enter '<email>' to the e-mail field
+	And I enter '<password>' to the password field
+	And I enter '<password>' to the confirm-password field
+	And I click on the button Submit
+    Then Message about error is appeared
+     
+   Example:
+|       email             | password    | confirm password    | message               |
+|                         |             |                     | <confirm password>    |
+|<sudack1996@mail.com>    |  <qwe123>   |         <>          |                       |
