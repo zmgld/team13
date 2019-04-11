@@ -16,18 +16,24 @@ namespace Tests
             driver.Manage().Window.Maximize();
         }
 
+        //Reginstration and login
         [Test]
         public void Test1()
         {
             driver.Navigate().GoToUrl("https://test-myaccount.maximarkets.org/?lang=ru#register");
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
 
+            //Positive registration
+
             IWebElement elementMail = driver.FindElement(By.CssSelector(".desktop #email"));
             
             elementMail.Click();
             Random randomGenerator = new Random();
-            int randomInt = randomGenerator.Next(1000);
-            elementMail.SendKeys("username" + randomInt + "@gmail.com");
+            int randomInt = randomGenerator.Next(10000);
+
+            string email = "username" + randomInt + "@gmail.com";
+
+            elementMail.SendKeys(email);
             //password
             IWebElement elementPassword = driver.FindElement(By.CssSelector(".desktop #password"));
             elementPassword.Click();
@@ -37,16 +43,57 @@ namespace Tests
             elementPasswordConfirm.SendKeys("123qwe9");
             //sumbmitbutton
             elementPasswordConfirm.Submit();
+
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
+
             IWebElement logout = driver.FindElement(By.CssSelector(".pull-right.m-t8"));
             Assert.AreEqual(logout.Text, "Выйти");
 
             logout.Click();
+
+            //Positive Login
+
+            IWebElement loginEmail = driver.FindElement(By.CssSelector(".desktop #email"));
+            loginEmail.Click();
+            loginEmail.SendKeys(email);
+
+            IWebElement loginPassword = driver.FindElement(By.CssSelector(".desktop #password"));
+            loginPassword.Click();
+            loginPassword.SendKeys("123qwe9");
+            loginPassword.Submit();
+
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
+
+            IWebElement logoutLogin = driver.FindElement(By.CssSelector(".pull-right.m-t8"));
+            Assert.AreEqual(logoutLogin.Text, "Выйти");
+
+            logoutLogin.Click();
+
+            //Negative Login
+
+            IWebElement wrongEmail = driver.FindElement(By.CssSelector(".desktop #email"));
+            wrongEmail.Click();
+            wrongEmail.SendKeys("Wrong@wrong.wrong");
+
+
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
+
+            IWebElement wrongPassword = driver.FindElement(By.CssSelector(".desktop #password"));
+            wrongPassword.Click();
+            wrongPassword.SendKeys("123qwe9");
+            wrongPassword.Submit();
+
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(2);
+
+            IWebElement alertMessage = driver.FindElement(By.CssSelector(".alert-danger .alert-txt"));
+            Assert.AreEqual("Неверное имя пользователя или пароль.", alertMessage.Text);
+
         }
 
         [TearDown]
         public void closeBrowser()
         {
-            driver.Close();
+            //driver.Close();
         }
     }
 }
